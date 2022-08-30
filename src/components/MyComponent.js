@@ -1,15 +1,14 @@
 import React from "react";
 
 class MyComponent extends React.Component {
-  render() {
-    return (
-        <div>My first component {Math.random()}</div>
-    );
-  }
+    state = {
+        name: "anh quan",
+        city: "Da Nang",
+        age: 24,
+    };
+    render() {
+        return <div> My name is {this.state.name} and I'm from {this.state.city}</div>;
+    }
 }
-
-// const MyComponent = () => {
-//   return <div></div>;
-// };
 
 export default MyComponent;
