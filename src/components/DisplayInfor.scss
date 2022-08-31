@@ -1,11 +1,25 @@
 .display-infor-container {
-    .red {
-        color: red;
+    .user-item {
+        display: flex;
+        align-items: center;
+
+        .user-item-content {
+            width: 300px;
+        }
+
+        .delete-btn {
+            padding: 10px;
+            border: 1px solid red;
+        }
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
     }
 
-    .green {
-        color: green;
-    }
     img {
         width: 200px;
     }
