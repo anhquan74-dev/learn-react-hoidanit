@@ -26,8 +26,8 @@ class DisplayInfor extends React.Component {
                         {listUsers.map((user, index) => {
                             return (
                                 <div key={user.id} className={user.age > 18 ? 'green' : 'red'}>
-                                    <h1>My name is {user.name}</h1>
-                                    <h1>I'm {user.age}</h1>
+                                    <h4>My name is {user.name}</h4>
+                                    <h4>I'm {user.age}</h4>
                                     <hr />
                                 </div>
                             )
