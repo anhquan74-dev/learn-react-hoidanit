@@ -1,5 +1,5 @@
 import React from "react";
-
+import './DisplayInfor.scss'
 class DisplayInfor extends React.Component {
 
     state = {
@@ -17,21 +17,25 @@ class DisplayInfor extends React.Component {
         const { listUsers } = this.props
 
         return (
-            <div>
-                List Users: <span onClick={this.handleOnclickShowHideUsers}>
+            <div className="display-infor-container">
+                List Users:
+                <span onClick={this.handleOnclickShowHideUsers}>
                     {this.state.isShowListUsers === true ? 'Hide List Users' : 'Show List Users'}
                 </span>
+
                 {this.state.isShowListUsers &&
                     (<div>
-                        {listUsers.map((user, index) => {
-                            return (
-                                <div key={user.id} className={user.age > 18 ? 'green' : 'red'}>
-                                    <h4>My name is {user.name}</h4>
-                                    <h4>I'm {user.age}</h4>
-                                    <hr />
-                                </div>
-                            )
-                        })}
+                        {
+                            listUsers.map((user, index) => {
+                                return (
+                                    <div key={user.id} className={user.age > 18 ? 'green' : 'red'}>
+                                        <h4>My name is {user.name}</h4>
+                                        <h4>I'm {user.age}</h4>
+                                        <hr />
+                                    </div>
+                                )
+                            })
+                        }
                     </div>)
                 }
             </div>
