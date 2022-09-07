@@ -23,7 +23,7 @@ const DisplayInfor = (props) => {
     //     //     document.title = 'test'
     //     // },3000)
     //     console.log('>>> call me useEffect()')
-    // }, []);
+    // }, []); --> chay mot lan
 
     // componentDidUpdate
     useEffect(() => {
