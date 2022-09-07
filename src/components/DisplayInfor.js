@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DisplayInfor.scss";
 import logo from "../logo.svg";
 
@@ -82,15 +82,16 @@ import logo from "../logo.svg";
 // }
 
 const DisplayInfor = (props) => {
-    console.log(props)
-    const {listUsers}  = props; //object
-    console.log(listUsers)
+    const { listUsers } = props; //object
+    const [toggle, setToggle] = useState(true);
+
     return (
         <div className="display-infor-container">
             <img src={logo} alt="logo" />
             <br />
             List Users:
-            {true && (
+            <span onClick={() => setToggle(!toggle)}> {toggle ? 'Hide' : 'Show'} List Users</span>
+            {toggle && (
                 <>
                     {listUsers.map((user, index) => {
                         return (
